@@ -1,0 +1,71 @@
+@import '@/lib/reset.scss';
+.container {
+  .box {
+    .header {
+      .header-box {
+        @include rect(100%, 100%);
+        @include flexbox();
+        padding: 0 .14rem;
+        margin-top: .1rem;
+        .search {
+          @include flex();
+          @include rect(auto, .35rem);
+          border-radius: .18rem;
+          background-color: #e0e0e0;
+          @include flexbox();
+          @include align-items(center);
+          img {
+            @include rect(.2rem, .2rem);
+            margin-left: .11rem;
+            
+          }
+          input {
+            @include rect(auto, 100%);
+            border: none;
+            background-color: #e0e0e0;
+          }
+        }
+        .sach {
+          @include rect(.36rem, .35rem);
+          margin-left: .08rem;
+        }
+      }
+    }
+    .content {
+      .welcome {
+        @include flexbox();
+        // @include justify-content(center);
+        @include rect(94%, auto);
+        margin: 0 auto;
+        margin-top: .18rem;
+        img {
+          @include rect(100%, 100%);
+        }
+      }
+      .nav {
+        @include rect(86%, .82rem);
+        @include flexbox();
+        @include justify-content(space-around);
+        @include align-items(center);
+        margin: 0 auto;
+        li {
+          @include flexbox();
+          @include flex-direction(column);
+          // @include justify-content(center);
+          img {
+            @include rect(.24rem, .24rem);
+            // display: block;
+            margin: 0 auto;
+          }
+          p {
+            font: .14rem/.26rem "";
+            color: #4599F8;
+          }
+        }
+      }
+      .member {
+
+      }
+    }
+  }
+}
