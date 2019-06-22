@@ -1,11 +1,15 @@
 import React from 'react';
 
 class Com extends React.Component {
-  render () {
+  render() {
     return (
-      <div className = "box">
-        <header className = "header">Home头部</header>
-        <div className = "content">Home内容</div>
+      <div className="box">
+        <header className="header">
+          <img src = { '@/assets/images/back.png' } alt = ''/>
+        </header>
+        <div className="content">
+          首页内容
+        </div>
       </div>
     )
   }

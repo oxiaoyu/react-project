@@ -3,6 +3,8 @@
 # dependencies
 /node_modules
 /.pnp
+/Ê×Ò³.psd
+/Ê×Ò³_slices.zip
 .pnp.js
 
 # testing
