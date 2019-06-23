@@ -50,7 +50,22 @@ const getProList = function () {
   }
 }
 
+let liveList = [];
+const getLiveList = function () {
+  for (var i = 0; i < 3; i++) {
+    var item = {
+      id: i,
+      itemSrc: Mock.Random.image('100x100', '#894FC4', '#FFF', 'png', '我是第' + i + '张图片'),
+      alt: Mock.mock('@url()'),
+      href: Mock.mock('@url()'),
+      "num|1000-10000":1
+    }
+    liveList.push(item);
+  }
+  console.log(liveList)
+  return liveList
+}
 
-
+Mock.mock('http://www.daxunxun.com/liveData', 'get', getLiveData)
 Mock.mock('http://www.daxunxun.com/banner', 'get', getBanner)
 Mock.mock('http://www.daxunxun.com/douban', 'get', getProList)

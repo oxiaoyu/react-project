@@ -1,11 +1,72 @@
 import React from 'react';
+import NoLogin from '@/components/user/NoLogin';
+import Login from '@/components/user/Login';
+import '@/style/user.scss';
+
+const  liData = [{
+  ico:'icon-zuanshi',
+  h6: '成为会员',
+  p: '尊享会员积分权益',
+},
+{
+  ico:'icon-licaipressed',
+  h6: '理财管理',
+  p: '专属你的小金库',
+},
+{
+  ico:'icon-wallet',
+  h6: '我的卡包',
+  p: '卡片管理切换自如',
+},
+{
+  ico:'icon-caifuzhangdan',
+  h6: '我的账单',
+  p: '账单流水一目了然',
+},
+{
+  ico:'icon-kefu',
+  h6: '客服服务',
+  p: '全方位为您服务',
+}] 
 
 class Com extends React.Component {
+
+  componentDidMount () {
+
+  }
+
+  toLigin(e) {
+    if(e.target.className === 'toLogin'){
+      this.props.history.push('/users/login');
+    } else if (e.target.className === 'iconfont icon-set') {
+      this.props.history.push('/users/setting');
+    }
+  }
   render () {
     return (
       <div className = "box">
-        <header className = "header">个人中心头部</header>
-        <div className = "content">个人中心内容</div>
+        <div className = "content">
+          <div onClick = { this.toLigin.bind(this)} className = 'user'>
+           { this.props.isLogin === 'ok' ? <Login/> : <NoLogin/>}  
+            <div className = "userMenu">
+              <ul>
+                {
+                  liData.map((item, index) => (
+                    <li key = { index }> 
+                      <span className ={`iconfont ${item.ico}`} ></span>
+                      <div>
+                        <h6>{ item.h6 }</h6>
+                        <p>{ item.p }</p>
+                      </div>
+                      <span className = 'iconfont icon-qianjin'></span>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+          </div>
+          </div>
+         
       </div>
     )
   }

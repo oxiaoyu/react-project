@@ -15,7 +15,7 @@ const App = () => (
       <Route path = '/home' component = { Home } />
       <Route path = '/liCai' component = { LiCai } />
       <Route path = '/find' component = { Find } />
-      <Route path = '/user' component = { User } />
+      <Route path = '/user' component = { User} />
       <Redirect to = '/home'  />
     </AnimatedRouter>
     <Footer/>

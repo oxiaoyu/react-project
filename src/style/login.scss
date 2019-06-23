@@ -1,0 +1,74 @@
+@import '@/lib/reset.scss';
+#root .login-header,.setting-header{
+  @include flexbox();
+  @include background-color(#f66);
+  @include color(#fff);
+  @include align-items();
+  @include padding(0 .27rem);
+  font:400 .14rem/.2rem '';
+  .icon-fanhui{
+    font-size:.14rem;
+    font-weight: 800;
+    padding:.1rem;
+  }
+}
+.login-bg{
+  @include rect(100%,3.16rem);
+  @include background-color(#f66);
+}
+.inputItem{
+  padding-top:.98rem;
+  @include flexbox();
+  @include flex-direction(column);
+  @include justify-content();
+  .userName,.passWord{
+    padding:0 20%;
+    @include rect (100%,.28rem);
+    @include align-items();
+    // overflow: hidden;
+    margin-bottom:.26rem;
+    &>div{
+      font-size:.18rem;
+      color:#a4a4a4;
+    position:relative;
+    float: right;
+    }
+    .iconfont{
+      font:.26rem/1 '';
+      color:#f66;
+    }
+    input{
+      border:0;
+      @include rect(100%,100%);
+      border-bottom:1px solid rgba(0,0,0,.3);
+      background:transparent;
+      text-align: center;
+      color:#666;
+    }
+    .value{
+      position:absolute;
+      left:0;
+      @include rect(100%,100%);
+      @include text-align();
+      z-index: -1;
+    }
+  }
+  .goLogin{
+    @include rect(2.4rem,.44rem);
+    @include background-color(#4599f8);
+    @include border-radius(.44rem);
+    font:.18rem/.44rem '';
+    color:#fff;
+    margin:.22rem auto;
+    border:0;
+  }
+  .more{
+    padding:0 20%;
+    @include flexbox();
+    @include justify-content(space-between);
+    font:400 .14rem/.2rem '';
+    a{
+      color:#4599f8;
+    }
+  }
+}

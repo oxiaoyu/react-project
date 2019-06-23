@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './layout/App';
-import Other from './layout/Other';
+import Users from './layout/Users';
 import * as serviceWorker from './serviceWorker';
 import { HashRouter, Switch, Route }  from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -12,7 +12,7 @@ ReactDOM.render(
 <Provider store = { store }>
   <HashRouter>
     <Switch>
-      <Route path = '/other' component = { Other } />
+      <Route path = '/users' component = { Users } />
       <Route path = '/' component = { App } />
     </Switch>
   </HashRouter>

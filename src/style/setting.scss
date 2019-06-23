@@ -1,0 +1,7 @@
+@import '@/lib/reset.scss';
+.setting-header{
+  @include color(#343434);
+}
+#root .setMenu ul{
+  padding-top:0;
+}

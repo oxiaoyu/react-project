@@ -1,0 +1,99 @@
+@import '@/lib/reset.scss';
+.user{
+  @include rect(100%,100%);
+  @include flexbox();
+  @include flex-direction(column);
+  .noLogin{
+    @include rect(100%,2.09rem);
+    border-bottom:1px solid #bbb;
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items();
+    color:#101010;
+    padding-top:.42rem;
+    h4{
+      font:200 .28rem/.32rem 'Times New Roman-regular';
+    }
+    p{
+      font:.15rem/.2rem 'Heiti SC';
+      margin:.12rem 0;
+    }
+    button{
+      @include rect(1.65rem,.38rem);
+      @include background-color(#4599f8);
+      border:1px solid rgba(0,0,0, .3);
+      @include border-radius(.38rem);
+      color:#fff;
+      font:300 .18rem/.38rem 'Heiti SC';
+      margin-top:.16rem;
+    }
+  }
+  .login{
+    @include rect(100%,1.26rem);
+    border-bottom:1px solid #bbb;
+    @include flexbox();
+    padding:.26rem .26rem .25rem .29rem;
+    img{
+      @include rect(.7rem,.7rem);
+      @include border-radius(50%);
+      margin-right:.15rem;
+    }
+    .userMsg{
+      @include flex();
+      @include flexbox();
+      @include flex-direction(column);
+      @include justify-content();
+      font-size:.24rem;
+      padding-top:.1rem;
+      .username{
+        font:.2rem/.28rem 'PingFangSC-regular';
+        color:#101010;
+        margin-bottom:.11rem;
+      }
+      p{
+        font:.12rem/.18rem 'PingFangSC-regular';
+        color:#999;
+        span{
+          color:#fa0;
+        }
+      }
+    }
+    &>span{
+      font-size:.24rem;
+      position:relative;
+      top:-.06rem;
+    }
+  }
+}
+.userMenu{
+  @include flex();
+  @include rect(100%,auto);
+  ul{
+    padding:.15rem .28rem;
+    li{
+      @include rect(auto,.8rem);
+      @include flexbox();
+      @include justify-content();
+      @include align-items();
+      .iconfont{
+        font-size:.24rem;
+        color:#4599f8;
+      }
+      .icon-qianjin{
+        font:1000 .16rem/1 '';
+        color:#101010;
+      }
+      div{
+        @include flex();
+        padding:0 .18rem;
+        h6{
+          font:.2rem/.28rem 'PingFangSC-regular';
+        }
+        p{
+          font:.12rem/.18rem 'PingFangSC-regular';
+          color:#a4a4a4;
+        }
+      }
+    }
+  }
+}
