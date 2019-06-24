@@ -34,7 +34,6 @@
     .content {
       .welcome {
         @include flexbox();
-        // @include justify-content(center);
         @include rect(94%, auto);
         margin: 0 auto;
         margin-top: .18rem;
@@ -63,8 +62,81 @@
           }
         }
       }
-      .member {
-
+      .main {
+        @include rect(94%, auto);
+        margin: 0 auto;
+        margin-bottom: .21rem;
+        .main-t {
+          @include flexbox();
+          @include justify-content(space-between);
+          @include align-items(center);
+          .main-t-l {
+            h3 {
+              font: .2rem/.28rem 'PingFangSC-regular';
+            }
+            p {
+              font: .12rem/.17rem 'PingFangSC-regular';
+              color: #A4A4A4;
+            }
+          }
+          .main-t-r {
+            @include rect(.24rem, .24rem);
+            @include flexbox();
+            @include justify-content(center);
+            @include align-items(center);
+            img {
+              @include rect(.1rem, .16rem);
+            }
+          }
+        }
+        .main-b {
+          @include rect(100%, auto);
+          margin: 0 auto;
+          margin-top: .08rem;
+          img {
+            @include rect(100%, 100%)
+          }
+        }
+      }
+      .recommend-banner {
+        ul {
+          @include flexbox();
+          @include justify-content(space-between);
+          @include rect(100%, 100%);
+          text-align: center;
+          li {
+            // @include rect(28%, auto);
+            .recommend-news {
+              border: 1px solid #c2c2c2;
+              border-radius: .08rem;
+              span {
+                display: block;
+              }
+              span:nth-child(1) {
+                color: #FF6651;
+                font: .2rem/.28rem "";
+                padding: .15rem 0;
+              }
+              span:nth-child(2) {
+                color: #101010;
+                font: .12rem/.17rem "";
+              }
+              span:nth-child(3) {
+                color: #A4A4A4;
+                font: .1rem/.17rem "";
+                padding: 0 .07rem .07rem 0;
+              }
+            }
+            .recommend-btn {
+              background: #FF6651;
+              color: #fff;
+              @include rect(.88rem, .28rem);
+              border-radius: .14rem;
+              font: .12rem/.28rem "";
+              margin-top: .13rem;
+            }
+          }
+        }
       }
     }
   }
