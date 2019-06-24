@@ -47,7 +47,7 @@ class Com extends React.Component {
               <div></div>
             </div>
             <button className = "goLogin" onClick = { this.Login.bind(this)}>登录</button>   
-            <p className = "more"><a className = "toRegiser">去注册</a><a className = "forget">忘记密码</a></p>         
+            <p className = "more"><a href = "#" className = "toRegiser">去注册</a><a href = "#" className = "forget" >忘记密码</a></p>         
           </div>
         </div>
       </div>

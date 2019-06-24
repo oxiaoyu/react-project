@@ -3,7 +3,7 @@ import React from "react";
 const Com = () => (
   <div className = "login">
     <div className = "userImg">
-      <img src={require('@/assets/钻石.png')} />
+      <img src={require('@/assets/钻石.png')} alt = "砖石"/>
     </div>
     <div className = "userMsg">
       <div className = "username">
