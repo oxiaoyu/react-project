@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './layout/App';
+import Recommend from './layout/RecommendApp';
+import Customized from './layout/CustomizedApp';
+import Information from './layout/InformationApp';
 import Other from './layout/Other';
 import * as serviceWorker from './serviceWorker';
 import { HashRouter, Switch, Route }  from 'react-router-dom';
@@ -13,6 +16,9 @@ ReactDOM.render(
   <HashRouter>
     <Switch>
       <Route path = '/other' component = { Other } />
+      <Route path = '/information' component = { Information } />
+      <Route path = '/customized' component = { Customized } />
+      <Route path = '/recommend' component = { Recommend } />
       <Route path = '/' component = { App } />
     </Switch>
   </HashRouter>

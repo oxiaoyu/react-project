@@ -1,0 +1,61 @@
+@import '@/lib/reset.scss';
+.container {
+  .box-cust {
+    @include rect(92%, 100%);
+    margin: 0 auto;
+    .header-cust {
+      @include rect(100%, .5rem);
+      @include flexbox();
+      @include align-items(center);
+      text-align: center;
+      .back {
+        @include rect(.24rem, .24rem);
+        img {
+          @include rect(.12, .19rem);
+        }
+      }
+      h3 {
+        @include flex();
+        font: .18rem/.25rem "";
+      }
+    }
+    .content {
+      .main {
+        @include rect(94%, auto);
+        margin: .2rem auto;
+        // margin-bottom: .2rem;
+        .main-t {
+          @include flexbox();
+          @include justify-content(space-between);
+          @include align-items(center);
+          .main-t-l {
+            h3 {
+              font: .2rem/.28rem 'PingFangSC-regular';
+            }
+            p {
+              font: .12rem/.17rem 'PingFangSC-regular';
+              color: #A4A4A4;
+            }
+          }
+          .main-t-r {
+            @include rect(.24rem, .24rem);
+            @include flexbox();
+            @include justify-content(center);
+            @include align-items(center);
+            img {
+              @include rect(.1rem, .16rem);
+            }
+          }
+        }
+        .main-b {
+          @include rect(100%, auto);
+          margin: 0 auto;
+          margin-top: .08rem;
+          img {
+            @include rect(100%, 100%)
+          }
+        }
+      }
+    }
+  }
+}

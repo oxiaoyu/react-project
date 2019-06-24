@@ -2,6 +2,16 @@ import React from 'react';
 import '@/style/home/home.scss';
 
 class Com extends React.Component {
+  goCustomized () {
+    // console.log(this)
+    this.props.history.push('/customized')
+  }
+  goInformation () {
+    this.props.history.push('/information')
+  }
+  goRecommend () {
+    this.props.history.push('/recommend')
+  }
   render() {
     return (
       <div className="box">
@@ -19,15 +29,15 @@ class Com extends React.Component {
             <img src={require('@/assets/images/welcome.png')} alt="" />
           </div>
           <ul className='nav'>
-            <li>
+            <li onClick = { this.goRecommend.bind(this) }>
               <img src={require('@/assets/images/nav1.png')} alt="" />
               <p>为您推荐</p>
             </li>
-            <li>
+            <li onClick = { this.goCustomized.bind(this) }>
               <img src={require('@/assets/images/nav2.png')} alt="" />
               <p>私人定制</p>
             </li>
-            <li>
+            <li onClick = { this.goInformation.bind(this) }>
               <img src={require('@/assets/images/nav3.png')} alt="" />
               <p>理财资讯</p>
             </li>
@@ -39,7 +49,7 @@ class Com extends React.Component {
                 <p>加入会员 尊享权益</p>
               </div>
               <div className='main-t-r'>
-                <img src={require('@/assets/images/back.png')} alt='' />
+                <img src={require('@/assets/images/go.png')} alt='' />
               </div>
             </div>
             <div className='main-b'>
@@ -53,7 +63,7 @@ class Com extends React.Component {
                 <p>理财产品 信息一览</p>
               </div>
               <div className='main-t-r'>
-                <img src={require('@/assets/images/back.png')} alt='' />
+                <img src={require('@/assets/images/go.png')} alt='' />
               </div>
             </div>
             <div className='main-b recommend-banner'>
@@ -98,7 +108,7 @@ class Com extends React.Component {
                 <p>信息活动 精彩纷呈</p>
               </div>
               <div className='main-t-r'>
-                <img src={require('@/assets/images/back.png')} alt='' />
+                <img src={require('@/assets/images/go.png')} alt='' />
               </div>
             </div>
             <div className='main-b'>
