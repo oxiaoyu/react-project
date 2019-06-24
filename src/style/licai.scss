@@ -1,0 +1,96 @@
+@import '../lib/reset.scss';
+
+.margin {
+  width: 3.83rem;
+  margin: 0 auto;
+}
+#root .container .box .header {
+  
+  width: 100%;
+  height: .74rem;
+  background: #e5e5e5;
+  font: 700 .18rem/.74rem "";
+  text-align: center;
+  position: relative;
+  .icon-zuojiantou {
+    position: absolute;
+    left: .25rem;
+    font-size: .2rem;
+  }
+}
+.content {
+  background: #f4f5f7;
+  overflow: auto;
+  img {
+    display: block;
+    width: 382px;
+    height: 1.74rem;
+    margin: 0 auto;
+  }
+  .moneykind {
+    width: 3.83rem;
+    height: 1.17rem;
+    ul {
+      padding-top: .22rem;
+      overflow: hidden;
+      li {
+        float: left;
+        width: .58rem;
+        height: .95rem;
+        margin-right: .22rem;
+        text-align: center;
+        &.last {
+          margin-right: 0;
+        }
+        span {
+          display: block;
+          width: .58rem;
+          height: .45rem;
+          background: pink;
+        }
+        p {
+          font: 700 .14rem/.26rem "";
+          color: #000;
+        }
+      }
+    }
+  }
+  .tuijian-box {
+    padding-left: .16rem;
+    height: 1.57rem;
+    overflow: hidden;
+    h3 {
+      font: 700 .17rem/.47rem "";
+      color: #000;
+    }
+    .tuijian-list {
+      overflow: auto;
+      ul {
+        overflow: auto;
+        display: flex;
+        li {
+          width: 3.34rem;
+          height: 1.11rem;
+          background: green;
+          flex-grow: 0;
+          flex-shrink: 0;
+          flex-basis: 3.34rem;
+          margin-right: .17rem;
+        }
+      }
+    }
+  }
+  .wenjian-box {
+    width: 3.83rem;
+    height: 2.27rem;
+    background: yellow;
+    h3 {
+      font: 700 .18rem/.46rem "";
+      span {
+        font: .14rem/.46rem "";
+        color: #666;
+        margin-left: 2.5rem;
+      }
+    }
+  }
+}
