@@ -3,7 +3,6 @@
   .box {
     .header {
       .header-box {
-        @include rect(100%, 100%);
         @include flexbox();
         padding: 0 .14rem;
         margin-top: .1rem;
