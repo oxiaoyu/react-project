@@ -5,6 +5,7 @@ html, body, #root, .container,.animated-router-container {
   .animated-router-container{
     @include flexbox();
     @include flex-direction(column);
+    @include overflow();
   }
 }
 .container {
@@ -18,6 +19,7 @@ html, body, #root, .container,.animated-router-container {
     font-family: 'PingFangSC-regular';
     font-size:.18rem;
     color:#101010;
+    @include overflow();
     .header {
       @include rect(100%, 0.5rem);
       @include background-color(#fff);

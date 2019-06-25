@@ -27,15 +27,21 @@ class Com extends React.Component {
     this.props.changeIsLogin();
   }
 
+  goBack () {
+    this.props.history.go(-1);
+  }
+
   render () {
     return (
       <div className = "box">
-        <header className = "header login-header">
-          <span className = "iconfont icon-fanhui" ></span>
+        
+        <div className = "content">
+          <div className = "login-bg">
+          <header className = "login-header">
+          <span className = "iconfont icon-fanhui" onClick = { this.goBack.bind(this) } ></span>
           <i>我的</i>
         </header>
-        <div className = "content">
-          <div className = "login-bg"></div>
+          </div>
           <div className = 'inputItem'  onClick = {this.onInput.bind(this)}>
             <div className = 'userName'>
               <span className = "iconfont icon-yonghu"></span>

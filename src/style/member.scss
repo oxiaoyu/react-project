@@ -1,0 +1,111 @@
+@import '@/lib/reset.scss';
+
+.member-header{
+  @include flexbox();
+  background:#FF6651;
+  @include color(#fff);
+  @include align-items();
+  @include padding(0 .08rem);
+  font:400 .14rem/.2rem '';
+  @include rect(100%,.44rem);
+  .icon-fanhui,.right{
+    @include rect(.34rem,100%);
+    font-size:.16rem;
+    font-weight: 800;
+    padding:.1rem;
+  }
+  .title{
+    @include flex();
+    @include text-align();
+    font-size:.18rem;
+  }
+}
+
+.content{
+  overflow-y:auto;
+  .userCard-bg{
+    @include rect(100%,1.90rem);
+    background:#FF6651;
+    padding-top:.35rem;
+    .card-box{
+      position: relative;
+       @include rect(3.2rem,1.9rem);
+       margin:0 auto;
+      .userCard{
+        @include rect(3.2rem,1.9rem);
+        background:url('../assets/vip会员\ \(1\).png')no-repeat;
+        background-size:cover;
+        position: relative;
+        z-index:2;
+        @include flexbox();
+        @include justify-content();
+        @include align-items();
+      }
+      .vip{
+        @include rect(.58rem,.58rem);
+        background:url('../assets/VIP.png');
+        background-size:cover;
+        position:absolute;
+        z-index:0;
+        top:-.29rem;
+        right:-.29rem;
+      }
+    }
+  }
+
+  .ico{
+    background:url(../assets/member-ico.png)no-repeat;
+  }
+  .navs{
+    margin-top:.48rem;
+    padding:.1rem .24rem;
+    @include flexbox();
+    @include flex-wrap(wrap);
+    li:nth-child(2) .pic{
+      background-position:-.3rem 0;
+    }
+    li:nth-child(3) .pic{
+      background-position:-.6rem 0;
+    }
+    li:nth-child(4) .pic{
+      background-position:.03rem -0.3rem;
+    }
+    li:nth-child(5) .pic{
+      background-position:-0.3rem -0.3rem;
+    }
+    li:nth-child(6) .pic{
+      background-position:-0.61rem -0.3rem;
+    }
+    
+    li{
+      @include flexbox();
+      @include flex-direction(column);
+      @include rect(1.22rem,.95rem);
+      @include align-items();
+      text-align:center;
+      margin-bottom:.1rem;
+      .pic{
+        @include rect(.3rem,.3rem);
+      }
+      .nav{
+        margin-top:.13rem;
+        font:.18rem/.24rem 'PingFangSC-Regular';
+        color:#000;
+      }
+      .txt{
+        font:.12rem/.24rem 'PingFangSC-Regular';
+        color:#a4a4a4;
+      }
+    }
+  }
+  .AD{
+    @include rect(100%,auto);
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items();
+    img{
+      @include rect(3.76rem,1.55rem);
+      padding-bottom:.18rem;
+    }
+  }
+}

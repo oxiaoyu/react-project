@@ -1,7 +1,7 @@
 @import '@/lib/reset.scss';
-#root .login-header,.setting-header{
+.login-header,.setting-header{
   @include flexbox();
-  @include background-color(#f66);
+  background:transparent;
   @include color(#fff);
   @include align-items();
   @include padding(0 .27rem);
@@ -13,8 +13,9 @@
   }
 }
 .login-bg{
-  @include rect(100%,3.16rem);
-  @include background-color(#f66);
+  @include rect(100%,3.66rem);
+  background:url('../assets/login-bg.png')no-repeat 0 -.34rem;
+  background-size:cover;
 }
 .inputItem{
   padding-top:.98rem;
@@ -40,7 +41,7 @@
     input{
       border:0;
       @include rect(100%,100%);
-      border-bottom:1px solid rgba(0,0,0,.3);
+      border-bottom:1px solid rgba(10,10,10,.4);
       background:transparent;
       text-align: center;
       color:#666;
