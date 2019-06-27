@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route }  from 'react-router-dom';
+import { Route }  from 'react-router-dom';
 import Login from '@/views/login';
 import Setting from '@/views/setting';
 import Member from '@/views/member';
