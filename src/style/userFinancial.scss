@@ -1,0 +1,131 @@
+@import '@/lib/reset.scss';
+
+.userF-header{
+  @include flexbox();
+  background:#5999F1;
+  @include color(#fff);
+  @include align-items();
+  @include padding(0 .08rem);
+  font:400 .14rem/.2rem '';
+  @include rect(100%,.44rem);
+  .icon-fanhui,.right{
+    @include rect(.34rem,100%);
+    font-size:.16rem;
+    font-weight: 800;
+    padding:.15rem;
+  }
+  .title{
+    @include flex();
+    @include text-align();
+    font-size:.18rem;
+  }
+}
+.userF-content{
+  background:#f2f5fa;
+  .userF-msg{
+    @include rect(100%,.6rem);
+    @include background-color(#5999F1);
+    @include flexbox();
+    @include justify-content(space-between);
+    padding:0 .18rem 0 .28rem;
+    .msg-left{
+      h5{
+        font:.18rem/1 'PingFangSC-Regular';
+        color:#fff;
+        margin-bottom:.12rem;
+      }
+      p{
+        @include flexbox();
+        span{
+          @include rect(.8rem,.19rem);
+          background:url('../assets/userFinancial/user-f-banzhang.png');
+          background-size:cover;
+        }
+      }
+    }
+    .msg-right{
+      @include flexbox();
+      @include align-items();
+      i{
+        @include rect(.4rem,.3rem);
+        background:url('../assets/userFinancial/user-f-zhushou.png')no-repeat;
+        background-size:contain;
+      }
+    }
+  }
+  .assets{
+    @include rect(100%,1.45rem);
+    @include flexbox();
+    @include justify-content();
+    @include align-items();
+    div{
+      @include rect(3.87rem,1.04rem);
+      background:#fff;
+      @include border-radius(.1rem);
+      padding:.22rem .15rem;
+      .assets-title{
+        font:.16rem/.18rem '';
+        color:#A4A4A4FF;
+        @include flexbox();
+        @include justify-content(space-between);
+        margin-bottom:.24rem;
+      }
+      .assets-num{
+        font:.24rem/1 '';
+        @include flexbox();
+        @include justify-content(space-between);
+        font-weight: 600;
+        .sum{
+          color:#000;
+        }
+        .num{
+          color:#FF6651FF;
+        }
+      }
+
+    }
+  }
+  .userFlist{
+    &>div{
+      @include rect(3.87rem,1.48rem);
+      @include flexbox();
+      @include flex-direction(column);
+      margin:0 auto;
+      .li-title{
+        padding:0 .1rem;
+        font:.18rem/1 'PingFangSC-Light';
+      }
+      ul{
+        @include flex();
+        @include rect(100%,auto);
+        @include flexbox();
+        @include justify-content(space-between);
+        margin:.12rem 0;
+        li{
+          // @include rect(1.2rem,100%);
+          @include flex();
+          background:#fff;
+          @include border-radius(.1rem);
+          margin:0 .05rem;
+          @include flexbox();
+          @include flex-direction(column);
+          @include align-items();
+          h5{
+            font:400 .15rem/1 'PingFangSC-Regular';
+            margin-top:.25rem;
+          }
+          span{
+            margin-top:.23rem;
+            color: #FF6651FF;
+            font:500 .18rem/1 '';
+          }
+          span:nth-of-type(2){
+            margin-top:.06rem;
+            font:.13rem/1 'PingFangSC-Light';
+            color:#000;
+          }
+        }
+      }
+    }
+  }
+}

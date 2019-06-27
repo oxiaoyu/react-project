@@ -1,0 +1,63 @@
+@import '@/lib/reset.scss';
+.service-header{
+  @include flexbox();
+  background:#FF6651;
+  @include color(#fff);
+  @include align-items();
+  @include padding(0 .08rem);
+  font:400 .14rem/.2rem '';
+  @include rect(100%,.44rem);
+  .icon-fanhui,.right{
+    @include rect(.34rem,100%);
+    font-size:.2rem;
+    font-weight: 800;
+    padding:.1rem;
+  }
+  .title{
+    @include flex();
+    @include text-align();
+    font-size:.18rem;
+  }
+}
+.content{
+  @include flexbox();
+  @include flex-direction(column);
+  .service-userMsg-userMsg{
+    @include rect(100%,.93rem);
+    background:#FF6651;  
+    color:#fff;
+    @include flexbox();
+    @include flex-direction(column);
+    padding:0 .28rem;
+    h5{
+      font:.18rem/1 'PingFangSC-Regular';
+    }  
+    p{
+      font:.13rem/.18rem 'PingFangSC-Thin';
+      margin-top:.15rem;
+    }
+    .user-ico{
+      margin-top:.1rem;
+      @include rect(.54rem,.2rem);
+      background-image:url('../assets/service/guwen-ico.png');
+      background-size:cover;
+    }
+  }
+  .service-cont{
+    @include flex();
+    @include rect(100%,auto);
+    &>div{
+      .service-date{
+        text-align:center;
+        font:.14rem/.24rem 'PingFangSC-Regular';
+        color:#A4A4A4FF;
+      }
+    }
+  }
+  .service-footer{
+    @include rect(100%,.5rem);
+    input{
+      border:1px solid #bfbfbf;
+    }
+  }
+}

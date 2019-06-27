@@ -41,14 +41,21 @@ class Com extends React.Component {
       this.props.history.push('/users/login');
     } else if (e.target.className === 'iconfont icon-set') {
       this.props.history.push('/users/setting');
-    } else if ( e.target.className === 'Member') {
-      if (this.props.isLogin === 'ok') {
-        this.props.history.push('/users/member');
-      } else {
-        this.props.history.push('/users/login');
-      }
-    }
+    } 
   }
+
+  meunEve (index) {
+    if ( this.props.isLogin !== 'ok' ) {
+      this.props.history.push('/users/login');
+    } else {
+      if ( index === 0 ) {
+        this.props.history.push('/users/member');
+      } else if (index === 1 ) {
+        this.props.history.push('/users/userFinancial');
+      }
+    } 
+  }
+  
   render () {
     return (
       <div className = "box">
@@ -59,10 +66,10 @@ class Com extends React.Component {
               <ul>
                 {
                   liData.map((item, index) => (
-                    <li key = { index }> 
+                    <li key = { index } className = { item.class } onClick = { this.meunEve.bind(this,index) }> 
                       <span className ={`iconfont ${item.ico}`} ></span>
                       <div>
-                        <h6 className = { item.class }>{ item.h6 }</h6>
+                        <h6 >{ item.h6 }</h6>
                         <p>{ item.p }</p>
                       </div>
                       <span className = 'iconfont icon-qianjin'></span>

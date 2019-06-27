@@ -7,7 +7,7 @@
   @include padding(0 .27rem);
   font:400 .14rem/.2rem '';
   .icon-fanhui{
-    font-size:.14rem;
+    font-size:.2rem;
     font-weight: 800;
     padding:.1rem;
   }
@@ -26,13 +26,13 @@
     padding:0 20%;
     @include rect (100%,.28rem);
     @include align-items();
-    // overflow: hidden;
     margin-bottom:.26rem;
     &>div{
+      @include rect(1.9rem,.26rem);
       font-size:.18rem;
       color:#a4a4a4;
-    position:relative;
-    float: right;
+      position:relative;
+      float: right;
     }
     .iconfont{
       font:.26rem/1 '';
@@ -45,13 +45,14 @@
       background:transparent;
       text-align: center;
       color:#666;
+      position: absolute;
+      z-index: 1;
     }
     .value{
       position:absolute;
       left:0;
       @include rect(100%,100%);
       @include text-align();
-      z-index: -1;
     }
   }
   .goLogin{
