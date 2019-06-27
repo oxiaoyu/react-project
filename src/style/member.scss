@@ -10,7 +10,7 @@
   @include rect(100%,.44rem);
   .icon-fanhui,.right{
     @include rect(.34rem,100%);
-    font-size:.16rem;
+    font-size:.2rem;
     font-weight: 800;
     padding:.1rem;
   }
@@ -33,7 +33,7 @@
        margin:0 auto;
       .userCard{
         @include rect(3.2rem,1.9rem);
-        background:url('../assets/vip会员\ \(1\).png')no-repeat;
+        background:url('../assets/member/vip会员\ \(1\).png')no-repeat;
         background-size:cover;
         position: relative;
         z-index:2;
@@ -43,8 +43,7 @@
       }
       .vip{
         @include rect(.58rem,.58rem);
-        background:url('../assets/VIP.png');
-        background-size:cover;
+        background-position: -.95rem 0;
         position:absolute;
         z-index:0;
         top:-.29rem;
@@ -54,13 +53,16 @@
   }
 
   .ico{
-    background:url(../assets/member-ico.png)no-repeat;
+    background:url(../assets/member/member-ico.png)no-repeat;
   }
   .navs{
     margin-top:.48rem;
     padding:.1rem .24rem;
     @include flexbox();
     @include flex-wrap(wrap);
+    li:nth-child(1) .pic{
+      background-position:.01rem 0;
+    }
     li:nth-child(2) .pic{
       background-position:-.3rem 0;
     }
@@ -85,7 +87,7 @@
       text-align:center;
       margin-bottom:.1rem;
       .pic{
-        @include rect(.3rem,.3rem);
+        @include rect(.31rem,.31rem);
       }
       .nav{
         margin-top:.13rem;
@@ -103,9 +105,27 @@
     @include flexbox();
     @include flex-direction(column);
     @include align-items();
-    img{
+    div{
       @include rect(3.76rem,1.55rem);
-      padding-bottom:.18rem;
+      margin-bottom:.18rem;
+      position:relative;
+      color:#FFFEFDFC;
+      
+      h6{
+        margin-top:.27rem;
+        padding-left:.21rem;
+        font:.24rem/.36rem 'PingFangSC-Regular';
+      }
+      p{
+        padding-left:.21rem;
+        font:.14rem/.16rem 'PingFangSC-Regular';
+      }
+      img{
+        @include rect(3.76rem,1.55rem);
+        position:absolute;
+        top:0;
+        z-index: -1;
+      }
     }
   }
 }
